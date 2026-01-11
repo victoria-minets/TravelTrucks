@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'next/navigation';
 import Image from 'next/image';
 import { fetchCamperById } from '@/lib/campersApi';
-import type { Camper, Review } from '@/types/camper';
+import type { Camper } from '@/types/camper';
 import css from './CamperPage.module.css';
 
 export default function CamperPage() {
