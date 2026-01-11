@@ -1,58 +1,47 @@
-import type { Metadata } from 'next';
-import { Roboto } from 'next/font/google';
+// app\layout.tsx
 
 import './globals.css';
-
+import { Inter } from 'next/font/google';
 import TanStackProvider from '@/components/TanStackProvider/TanStackProvider';
 import Header from '@/components/Header/Header';
-import Footer from '@/components/Footer/Footer';
-
-const roboto = Roboto({
-  weight: ['400', '500', '600', '700'],
-  variable: '--font-roboto',
-  subsets: ['latin'],
-  display: 'swap', // швидке відображення шрифту
-});
+import type { Metadata } from 'next';
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
 
 export const metadata: Metadata = {
-  title: 'NoteHub',
-  description: 'NoteHub - is simple note-taking app',
+  title: {
+    default: 'TravelTrucks',
+    template: '%s | TravelTrucks',
+  },
+  description: 'Camper rental platform by TravelTrucks',
   openGraph: {
-    title: 'NoteHub - is simple note-taking app',
-    description: "Let's create, edit and organize your notes.",
-    url: `${baseUrl}`,
-    images: [
-      {
-        url: 'https://ac.goit.global/fullstack/react/notehub-og-meta.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'NoteHub Open Graph Image',
-      },
-    ],
+    title: 'TravelTrucks',
+    description: "Let's find campers of your dreams.",
+    url: baseUrl,
+    siteName: 'TravelTrucks',
+    type: 'website',
   },
 };
 
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['400', '500', '600'],
+  variable: '--font-inter',
+  display: 'swap', // швидке відображення шрифту
+});
+
 export default function RootLayout({
   children,
-  modal,
 }: {
   children: React.ReactNode;
-  modal: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={roboto.variable}>
-      <body>
+    <html lang="en">
+      <body className={inter.variable}>
         <TanStackProvider>
           <Header />
-          <main>
-            {children}
-            {modal}
-          </main>
-          <Footer />
+          <main>{children}</main>
         </TanStackProvider>
-        <div id="modal-root" />
       </body>
     </html>
   );

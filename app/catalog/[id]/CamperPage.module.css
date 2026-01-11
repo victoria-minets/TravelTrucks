@@ -1,0 +1,89 @@
+.container {
+    padding: 2rem;
+}
+
+.header {
+    margin-bottom: 2rem;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.description {
+    margin-top: 1rem;
+}
+
+.bottom {
+    display: flex;
+    gap: 2rem;
+}
+
+.left {
+    flex: 2;
+}
+
+.right {
+    flex: 1;
+}
+
+.tabs button {
+    margin-right: 1rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.tabs .active {
+    font-weight: bold;
+    border-bottom: 2px solid #000;
+}
+
+.tabContent ul {
+    list-style: none;
+    padding: 0;
+}
+
+.bookingForm {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.bookingForm input,
+.bookingForm button {
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+.success {
+    color: green;
+    margin-top: 0.5rem;
+}
+
+.tabContent {
+    position: relative;
+    min-height: 320px;
+    /* ключовий момент */
+}
+
+.tabPanel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.visible {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+}

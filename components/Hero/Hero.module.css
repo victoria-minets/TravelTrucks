@@ -1,0 +1,55 @@
+.hero {
+    width: 100vw;
+    height: 696px;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+        image-set(url('/heroBackground/hero-truck-desk-min.jpg') 1x,
+            url('/heroBackground/hero-truck-desk-2x-min.jpg') 2x);
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    align-items: left;
+    padding-left: 64px;
+}
+
+.content {
+    margin-top: 260px;
+    color: #f7f7f7;
+    text-align: left;
+}
+
+.title {
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 0.67;
+}
+
+.description {
+    margin-top: 16px;
+    margin-bottom: 40px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.33;
+}
+
+.link {
+    display: inline-block;
+    border-radius: 50px;
+    padding: 16px 0px;
+    width: 173px;
+    background-color: #e44848;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: -0.01em;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.2s ease;
+}
+
+.link:hover,
+.link:focus,
+.link:active {
+    background-color: #d84343;
+}
